@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Tim's Quiz</title>
+  <link rel="stylesheet" href="./Assets/style.css" />
+</head>
+
+<body>
+  <label class="label">Tim's Programming Quiz</label>
+  <header>
+
+    <div id="currentScore">
+    </div>
+    <div id="countdown">
+    </div>
+  </header>
+
+  <div class='container' id="quiz-container">
+    <form>
+      <div id="question">Go!</div>
+      <ul id="choiceSelected">
+        <li><button class="choicebtn" type="button" id="option1" value=1><span></span></button></li>
+        <li><button class="choicebtn" type="button" id="option2" value=2><span></span></button></li>
+        <li><button class="choicebtn" type="button" id="option3" value=3><span></span></button></li>
+        <li><button class="choicebtn" type="button" id="option4" value=4><span></span></button></li>
+      </ul>
+      <span id="feedback"></span>
+
+    </form>
+
+  </div>
+  <button type='button' id="startbtn">Start Quiz</button>
+
+  <div class='container' id="score-container">
+
+
+
+    <span id="topScore">
+    </span>
+
+    <input type="text" id="userName">
+
+
+    <button type="button" id="savebtn">
+      Submit
+    </button>
+
+
+
+
+  </div>
+  <div class='container' id="highscore-container">
+    <label>List of Players and Scores</label>
+    <ul id="scorelist">
+
+    </ul>
+    <button type="button" id="resetbtn">
+      Try Again?
+    </button>
+  </div>
+
+  <script src="./Assets/script.js"></script>
+</body>
+
+</html>

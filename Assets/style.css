@@ -1,0 +1,99 @@
+body {
+    margin: 5%;
+    width: 90%;
+    font-size: 200%;
+
+}
+
+.label {
+    font-size: 300%;
+    text-align: center;
+    display: block;
+
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#currentScore {
+    float: left;
+}
+
+#timer {
+    float: right;
+}
+
+#question {
+    margin: auto;
+    width: 1000px;
+    text-align: center;
+}
+
+
+
+#startbtn {
+    color: rgb(245, 240, 255);
+    background-color: black;
+    margin: auto;
+    width: fit-content;
+    height: auto;
+    display: block;
+    font-size: 100%;
+}
+
+
+
+
+
+#choiceSelected {
+    padding: 5%;
+    margin: auto;
+    list-style-type: decimal;
+}
+
+.choicebtn {
+    font-size: 100%;
+    width: 1000px;
+    color: white;
+    background-color: indigo;
+
+}
+
+
+
+#userName {
+    width: 20%;
+    height: 30px;
+}
+
+#savebtn {
+    width: fit-content;
+    margin: 1%;
+    font-size: 100%;
+}
+
+#resetbtn {
+    font-size: 100%
+}
+
+.container {
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border: solid black;
+
+}
+
+#feedback {
+    display: block;
+    text-align: center;
+}
+
+#scorelist {
+    list-style-type: decimal;
+}
