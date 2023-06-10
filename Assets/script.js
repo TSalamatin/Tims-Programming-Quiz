@@ -32,6 +32,8 @@ var noQuestions = false
 let currentScore = 0
 let topScore = 0
 
+
+//Pull the Top score for comparison, if there is none, generate one with 0
 function getTopScore() {
   if (JSON.parse(localStorage.getItem('topScore')) === null) {
     localStorage.setItem('topScore', topScore)
@@ -41,21 +43,26 @@ function getTopScore() {
 }
 getTopScore()
 
+
+//Reset all fields
 function resetQuiz() {
   feedbackEL.textContent = ''
   quizEl.style.display = 'flex'
   scoreEl.style.display = 'none'
   highEl.style.display = 'none'
   questionNum = 0
+  currentScore = 0
+  document.getElementById('userName').value = ''
   newHighscore.textContent = ''
   moveQuestions()
   runGame()
 }
 
+
 function showResults() {
   updateScore()
-  console.log('Current Score' + currentScore)
-  console.log('Top Score' + topScore)
+  
+  
   if (currentScore > topScore) {
     newHighscore.textContent = 'Congrats! New High Score!'
     topScore = currentScore
@@ -67,17 +74,9 @@ function showResults() {
   scoreEl.style.display = 'flex'
   highEl.style.display = 'none'
 
-
-
-
-
-
-
-
-
 }
 
-
+//Display all records in local storage
 function showScores() {
   document.getElementById('scorelist').innerHTML = ''
 
@@ -129,9 +128,8 @@ var QnAs = [
 
 ];
 
-
+//Move the next Question and Answers
 function moveQuestions() {
-
   questionEl.textContent = QnAs[questionNum].question
   option1El.textContent = QnAs[questionNum].options[0]
   option2El.textContent = QnAs[questionNum].options[1]
@@ -139,7 +137,7 @@ function moveQuestions() {
   option4El.textContent = QnAs[questionNum].options[3]
 }
 
-
+//Increment Questions, detected if there isnt any
 function nextQuestion() {
   if (QnAs[questionNum + 1] !== undefined) {
     questionNum++
@@ -215,7 +213,7 @@ function runGame() {
 
 }
 
-
+//Listen for when the User submits their name
 saveEl.addEventListener('click', function () {
   var scoreRecord = {
     name: document.getElementById('userName').value,
